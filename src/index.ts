@@ -1,1 +1,2 @@
-console.log("DSA with TypeScript is ready!");
+/*const arr = [1, 2, 3];
+console.log(arr);*/
