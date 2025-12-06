@@ -35,7 +35,7 @@ export default [
         "warn",
         {
           "arrowParameter": true,
-          "variableDeclaration": true,
+          "variableDeclaration": false,
           "memberVariableDeclaration": true,
           "parameter": true,
           "propertyDeclaration": true,
@@ -43,6 +43,16 @@ export default [
         }
       ]
     },
+  },
+
+  // Jest test files
+  {
+    files: ["**/*.test.ts", "**/__tests__/**/*.ts"],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      }
+    }
   },
 
   // Prettier config (disables formatting rules from ESLint)
