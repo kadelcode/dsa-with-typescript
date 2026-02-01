@@ -18,3 +18,28 @@ Each value is accessed using an **index**, starting from `0`.
 ```ts
 const fruits = ["apple", "banana", "orange"];
 ```
+
+---
+
+## Indexing Rules
+- Arrays are zero-indexed
+- First element => index `0`
+- Last index => `length - 1`
+
+```ts
+fruits[0]; // "apple"
+fruits.length; // 3
+```
+
+---
+
+## Declaring Arrays in TypeScript
+### Using square brackets (recommended)
+```
+let numbers: number[] = [1, 2, 3];
+```
+
+### Using generics
+```
+let names: Array<string> = ["Ada", "John"];
+```
