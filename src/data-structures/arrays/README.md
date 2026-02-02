@@ -105,3 +105,34 @@ for (const fruit of fruits) {
 [10, 20, 30].find(n => n > 15);
 // 20
 ```
+
+---
+
+## Array Length
+```
+fruits.length;
+```
+- `length` gives the total number of elements
+- it is **not** the last index
+
+---
+
+## Readonly Arrays
+Readonly arrays cannot be modified.
+```
+const ids: readonly number[] = [1, 2, 3];
+// ids.push(4); Error occurs
+```
+
+---
+
+## Common Mistakes
+```
+fruits[10]; // undefined (index out of range)
+```
+
+```
+const a = [];
+const b = [];
+a === b; // false (reference comparison)
+```
