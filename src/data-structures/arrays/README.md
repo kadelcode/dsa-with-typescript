@@ -67,3 +67,41 @@ fruits.unshift("grape"); // add to start
 fruits.pop()     // remove last element
 fruits.shift(); //  remove first element
 ``` 
+
+---
+
+## Looping Through Arrays
+### for loop
+```
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+```
+
+### for...of loop (cleaner) 
+```
+for (const fruit of fruits) {
+    console.log(fruit);
+}
+```
+
+---
+
+## Common Array Methods
+### map - transform elements
+```
+[1, 2, 3].map(n => n * 2);
+// [2, 4, 6]
+```
+
+### filter - select elements
+```
+[1, 2, 3, 4].filter(n => n % 2 === 0);
+// [2, 4]
+```
+
+### find - first matching element
+```
+[10, 20, 30].find(n => n > 15);
+// 20
+```
