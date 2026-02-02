@@ -43,3 +43,27 @@ let numbers: number[] = [1, 2, 3];
 ```
 let names: Array<string> = ["Ada", "John"];
 ```
+
+---
+
+## Arrays with Multiples Types
+Use union types when an array can contain more than one type.
+```
+let data: (string | number)[] = ["age", 25];
+```
+
+---
+
+## Adding Elements
+```
+fruits.push("mango");    // add to end
+fruits.unshift("grape"); // add to start
+```
+
+---
+
+## Removing Elements
+```
+fruits.pop()     // remove last element
+fruits.shift(); //  remove first element
+``` 
