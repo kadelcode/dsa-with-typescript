@@ -136,3 +136,38 @@ const a = [];
 const b = [];
 a === b; // false (reference comparison)
 ```
+
+---
+
+## Advanced Array Tricks
+
+1. ### ```reduce()``` - The Swiss Army Knife
+- Use when you want ONE result from MANY values
+
+#### Sum
+```
+const total = [1, 2, 3, 4].reduce(
+    (sum, n) => sum + n,
+    0
+);
+
+```
+**How it works**
+- `initialValue = 0` (sum starts at 0)
+- Iteration 1: `sum = 0, n = 1` -> 0 + 1 = 1
+- Iteration 2: `sum = 1, n = 2` -> 1 + 2 = 3
+- Iteration 3: `sum = 3, n = 3` -> 3 + 3 = 6
+- Iteration 4: `sum = 6, n = 4` -> 6 + 4 = 10
+- Result: `total = 10`
+
+#### Count
+```
+const words = ["a", "b", "a", "c"];
+
+const count = words.reduce<Record<string, number>>((acc, word) => {
+    acc[word] = (acc[word] || 0) + 1;
+    return acc;
+}, {});
+```
+
+
