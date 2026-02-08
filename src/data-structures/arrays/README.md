@@ -141,7 +141,7 @@ a === b; // false (reference comparison)
 
 ## Advanced Array Tricks
 
-1. ### ```reduce()``` - The Swiss Army Knife
+### 1. ```reduce()``` - The Swiss Army Knife
 - Use when you want ONE result from MANY values
 
 #### Sum
