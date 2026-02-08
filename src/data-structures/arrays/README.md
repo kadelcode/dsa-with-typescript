@@ -181,3 +181,18 @@ const count = words.reduce<Record<string, number>>((acc, word) => {
 4. `acc = {a: 2, b: 1}, word = "c"` -> `acc["c"] = (undefined || 0) + 1 = 1` -> `{a: 2, b: 1, c: 1}`
 
 Result: `{a: 2, b: 1, c: 1}`
+
+### 2. Remove Duplicates (Pro Way)
+#### Using `Set`
+```
+const nums = [1, 2, 2, 3, 3];
+const unique = [...new Set(nums)];
+// Result: [1, 2, 3]
+```
+**How it works:**
+1. `new Set(nums)` creates a Set from the array
+    - A Set automatically removes duplicates (it only stores unique values)
+    - `Set {1, 2, 3}` (the second 2 and 3 are ignored)
+2. `[...new Set(nums)] uses the spread operator to convert the Set back to an array
+    - Equivalent to `Array.from(new Set(nums))`
+
