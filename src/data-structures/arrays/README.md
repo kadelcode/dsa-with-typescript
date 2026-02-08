@@ -169,5 +169,15 @@ const count = words.reduce<Record<string, number>>((acc, word) => {
     return acc;
 }, {});
 ```
+**Breakdown:**
+- `initialValue = {}` (empty object)
+- ```Record<string, number>``` is a TypeScript type annotation (object with string keys and number values)
+- ```acc[word || 0]``` uses short-circuit evaluation: if ```acc[word]``` doesn't exist, use 0
 
+**Step-by-step execution:**
+1. `acc = {}, word = "a"` -> `acc["a"] = (undefined || 0) + 1 = 1` -> `{a: 1}`
+2. `acc = {a: 1}, word = "b"` -> `acc["b"] = (undefined || 0) + 1 = 1` -> `{a: 1, b: 1}`
+3. `acc = {a: 1, b: 1}, word = "a"` -> `acc["a"] = (1 || 0) + 1 = 2` -> `{a: 2, b: 1}`
+4. `acc = {a: 2, b: 1}, word = "c"` -> `acc["c"] = (undefined || 0) + 1 = 1` -> `{a: 2, b: 1, c: 1}`
 
+Result: `{a: 2, b: 1, c: 1}`
